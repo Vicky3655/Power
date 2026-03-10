@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fir.net</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1> Power House Gallery</h1>
+    <p>A Beautiful Pinterest-Style Layout</p>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search for images..." id="searchInput">
+  </div>
+
+  <!-- Masonry Gallery -->
+  <div class="masonry-gallery">
+    <!-- Tall Image -->
+    <div class="masonry-item" onclick="openModal(0)">
+      <img src="1000_F_1279995826_6vJuFSLrPvHpQNelwXqoFVWtTbcQ6WGk.jpg" alt="Dream girl">
+      <div class="image-info">
+        <h3>Dream girl</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Medium Image -->
+    <div class="masonry-item" onclick="openModal(1)">
+      <img src="1000_F_891585995_P2Wt8a8p7owQtJp5w9CJgridoeB7WJwR.jpg" alt="House kits">
+      <div class="image-info">
+        <h3>House kits</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Short Image -->
+    <div class="masonry-item" onclick="openModal(2)">
+      <img src="1000_F_1729071412_47NUzkzQ0A4gkpOlgcCBkYqoIxn4d9of.jpg" alt="Day smile">
+      <div class="image-info">
+        <h3>Day smile</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Tall Image -->
+    <div class="masonry-item" onclick="openModal(3)">
+      <img src="1000_F_744688310_CeWKUkT0aheIzK7sxSti54yCeVkefh4T.jpg" alt="House kits 2">
+      <div class="image-info">
+        <h3>House kits 2</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Medium Image -->
+    <div class="masonry-item" onclick="openModal(4)">
+      <img src="e1e176b9-df7c-4268-8b36-21927288b209.jpg" alt="Motivation">
+      <div class="image-info">
+        <h3>Motivation</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Short Image -->
+    <div class="masonry-item" onclick="openModal(5)">
+      <img src="logo-dark-transparent.png" alt="Dark logo">
+      <div class="image-info">
+        <h3>Dark logo</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Medium Image -->
+    <div class="masonry-item" onclick="openModal(6)">
+      <img src="logo-2-square.png" alt="Power House">
+      <div class="image-info">
+        <h3>Power House</h3>
+        <p>Sticker Avaliable</p>
+      </div>
+    </div>
+
+    <!-- Tall Image -->
+    <div class="masonry-item" onclick="openModal(7)">
+      <img src="logo-light-transparent.png" alt="Light logo">
+      <div class="image-info">
+        <h3>Light logo</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Short Image -->
+    <div class="masonry-item" onclick="openModal(8)">
+      <img src="5681546.jpg" alt="Girls Energy">
+      <div class="image-info">
+        <h3>Girls Energy</h3>
+        <p>Stickers Avaliable</p>
+      </div>
+    </div>
+
+    <!-- Medium Image -->
+    <div class="masonry-item" onclick="openModal(9)">
+      <img src="IMG-20251114-WA0087.jpg" alt="CEO Chime Victor">
+      <div class="image-info">
+        <h3>CEO Power House</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Tall Image -->
+    <div class="masonry-item" onclick="openModal(10)">
+      <img src="YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg" alt="Mens Health">
+      <div class="image-info">
+        <h3>Men's Health</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+
+    <!-- Short Image -->
+    <div class="masonry-item" onclick="openModal(11)">
+      <img src="e1e176b9-df7c-4268-8b36-21927288b209.jpg" alt="Motivation">
+      <div class="image-info">
+        <h3>Motivation</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="nav-arrow prev" onclick="changeImage(-1)">&#10094;</span>
+    <span class="nav-arrow next" onclick="changeImage(1)">&#10095;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="">
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalCategory"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      { src: '1000_F_1279995826_6vJuFSLrPvHpQNelwXqoFVWtTbcQ6WGk.jpg', title: 'Dream girl', category: 'Photography' },
+      { src: '1000_F_891585995_P2Wt8a8p7owQtJp5w9CJgridoeB7WJwR.jpg', title: 'House kits', category: 'Photography' },
+      { src: '1000_F_1729071412_47NUzkzQ0A4gkpOlgcCBkYqoIxn4d9of.jpg', title: 'Day smile', category: 'Photography' },
+      { src: '1000_F_744688310_CeWKUkT0aheIzK7sxSti54yCeVkefh4T.jpg', title: 'House kits 2', category: 'Photography' },
+      { src: 'e1e176b9-df7c-4268-8b36-21927288b209.jpg', title: 'Motivation', category: 'Photography' },
+      { src: 'logo-dark-transparent.png', title: 'Dark logo', category: 'Photography' },
+      { src: 'logo-2-square.png', title: 'Power House', category: 'Sticker Available' },
+      { src: 'logo-light-transparent.png', title: 'Light logo', category: 'Photography' },
+      { src: '5681546.jpg', title: 'Girls Energy', category: 'Stickers Available' },
+      { src: 'IMG-20251114-WA0087.jpg', title: 'CEO Chime Victor', category: 'Photography' },
+      { src: 'YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg', title: 'Mens Health', category: 'Photography' },
+      { src: 'e1e176b9-df7c-4268-8b36-21927288b209.jpg', title: 'Motivation', category: 'Photography' }
+    ];
+
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImg');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalCategory = document.getElementById('modalCategory');
+
+      modal.classList.add('show');
+      modalImg.src = images[index].src;
+      modalTitle.textContent = images[index].title;
+      modalCategory.textContent = images[index].category;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('show');
+    }
+
+    function changeImage(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      openModal(currentIndex);
+    }
+
+    // Search functionality
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const items = document.querySelectorAll('.masonry-item');
+      
+      items.forEach(item => {
+        const title = item.querySelector('h3').textContent.toLowerCase();
+        const category = item.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || category.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
