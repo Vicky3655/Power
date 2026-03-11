@@ -253,15 +253,29 @@ text-align: center;
     }
 
     .click {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        margin-top: 40px;
+        flex-direction: row; /* Keep them side-by-side if they are small */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
     }
 
     .btn-primary, .btn-primary1 {
-        width: 80%; /* Consistent button width on mobile */
-        justify-content: center;
+        width: auto;         /* Remove the 80% width */
+        min-width: 120px;    /* Ensure they aren't too tiny to tap */
+        padding: 10px 20px;  /* Reduced from 15px 40px */
+        font-size: 14px;     /* Smaller text */
+        height: auto;
     }
-}
+
+    .tele {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .svg1 {
+        width: 18px;         /* Scale down the phone icon */
+        height: 18px;
+    }
+
+
 
