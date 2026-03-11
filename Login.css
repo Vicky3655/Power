@@ -101,51 +101,64 @@ input[type="email"], input[type="password"] {
 
 }
 
-/* Mobile Devices (Phones) */
+/* MOBILE ONLY SETTINGS */
 @media (max-width: 768px) {
-    .logo img {
-        height: 100px;
-        width: 100px;
-    }
-
+    /* 1. Reset the background and container spacing */
     .container {
-        max-width: 95%;
-        margin: 50px auto; /* Moves the login box higher up for easier access */
+        max-width: 900px; /* Limits width to fit phone screen */
+        width: 90%;
+        margin: 50px auto; /* Moves login box up so it's visible on arrival */
         flex-direction: column;
+        height: auto;
     }
 
+    /* 2. Adjust Logo scaling */
+    .logo1 img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 3. Standardize Padding and Alignment */
     .content {
         padding: 30px 20px;
+        text-align: center;
     }
 
     .Log {
-        font-size: 24px;
-        text-align: center;
+        font-size: 26px;
+        margin-bottom: 20px;
     }
 
+    /* 4. Make Form Inputs and Buttons Full Width */
     input[type="email"], 
     input[type="password"] {
+        width: 100%;
         font-size: 14px;
         padding: 12px;
+        margin-bottom: 15px;
     }
 
     .forgot {
-        float: none; /* Centers the forgot password link */
+        float: none; /* Centers the 'Forgot Password' link */
         display: block;
-        text-align: center;
-        margin-top: 10px;
         font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 25px;
     }
 
     .sign {
-        width: 100%; /* Makes the button easy to tap */
-        margin-left: 0;
-        margin-top: 20px;
+        width: 100%; /* Makes the button easy to tap with a thumb */
+        margin: 0;
+        height: 45px;
+        font-size: 16px;
     }
 
-    .Create {
-        text-align: center;
-        margin-left: 0;
-        font-size: 16px;
+    .h3 {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 20px;
     }
 }
