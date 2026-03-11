@@ -184,17 +184,84 @@ width: 200px;
 text-align: center;
 }
 
+/* Tablet and Small Laptops */
+@media (max-width: 1024px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .intro h2 {
+        font-size: 70px; /* Scaling down the massive 100px font */
+    }
+
+    .intro {
+        width: 80%;
+        margin-top: 50px;
+    }
+}
+
+/* Mobile Devices (Phones) */
 @media (max-width: 768px) {
+    .logo img {
+        width: 250px; /* Smaller logo for mobile */
+        height: auto;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .links a {
+        font-size: 16px;
+    }
+
+    .Login {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+
     .intro {
         margin-left: 20px;
-        width: 90%;
+        margin-right: 20px;
+        width: calc(100% - 40px);
+        text-align: center;
     }
+
+    .intro h1 {
+        font-size: 24px;
+        justify-content: center;
+    }
+
+    .intro h1::before {
+        display: none; /* Removing the line on mobile for better centering */
+    }
+
+    .intro h2 {
+        font-size: 45px;
+        line-height: 1.1;
+    }
+
+    .intro h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
     .click {
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
+        margin-top: 40px;
     }
-    .btn-primary {
-        width: 100%;
-        margin-bottom: 10px;
+
+    .btn-primary, .btn-primary1 {
+        width: 80%; /* Consistent button width on mobile */
+        justify-content: center;
     }
 }
+
