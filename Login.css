@@ -98,4 +98,54 @@ input[type="email"], input[type="password"] {
     transition: background 0.3s, color 0.3s;}
 .h31:hover{
     color: rgba(94, 247, 94, 0.493);
+
+}
+
+/* Mobile Devices (Phones) */
+@media (max-width: 768px) {
+    .logo img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .container {
+        max-width: 95%;
+        margin: 50px auto; /* Moves the login box higher up for easier access */
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 30px 20px;
+    }
+
+    .Log {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    input[type="email"], 
+    input[type="password"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .forgot {
+        float: none; /* Centers the forgot password link */
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .sign {
+        width: 100%; /* Makes the button easy to tap */
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .Create {
+        text-align: center;
+        margin-left: 0;
+        font-size: 16px;
+    }
 }
