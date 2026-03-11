@@ -186,80 +186,106 @@ width: 200px;
 text-align: center;
 }
 
+/* MOBILE ONLY SETTINGS */
 @media (max-width: 768px) {
-    .logo img {
-        width: 250px; /* Smaller logo for mobile */
+    /* 1. Fix Navigation Header */
+    .nav {
+        flex-direction: column;
+        align-items: center;
         height: auto;
+        padding-bottom: 20px;
+    }
+
+    .logo img {
+        width: 220px; /* Scaled for smaller screens */
+        height: auto;
+        margin: 0;
     }
 
     .links {
+        gap: 15px;
+        margin: 15px 0;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
 
     .links a {
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    .login{
-        flex-direction: row; /* Keep them together */
+    /* 2. Fix Button Misalignment */
+    .Login {
+        display: flex;
+        flex-direction: row; /* Keeps them on one line */
+        align-items: center;  /* Forces vertical center alignment */
         justify-content: center;
         width: 100%;
-        margin-top: 15px;
+        gap: 10px;
+        margin-right: 0;
+        margin-top: 10px;
     }
 
+    .tele, .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;        /* Matches height exactly */
+        padding: 0 12px;     /* Minimized padding */
+        font-size: 13px;
+        border-radius: 4px;
+        width: auto;         /* Hugs the content */
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .btn-primary {
+        min-width: 110px;
+    }
+
+    .svg1 {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+
+    /* 3. Adjust Content (Intro) */
     .intro {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: calc(100% - 40px);
+        width: 90%;
+        margin: 40px auto;
         text-align: center;
     }
 
     .intro h1 {
-        font-size: 24px;
+        font-size: 20px;
         justify-content: center;
     }
 
     .intro h1::before {
-        display: none; /* Removing the line on mobile for better centering */
+        display: none; /* Cleaner look for mobile */
     }
 
     .intro h2 {
-        font-size: 45px;
+        font-size: 40px;
         line-height: 1.1;
     }
 
     .intro h3 {
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 10px;
     }
 
+    /* 4. Minimize Hero Buttons */
     .click {
-        flex-direction: row; /* Keep them side-by-side if they are small */
+        flex-direction: row;
         justify-content: center;
+        margin-left: 0;
         gap: 10px;
-        margin-top: 25px;
     }
 
     .btn-primary1 {
-        width: auto;         /* Remove the 80% width */
-        min-width: 120px;    /* Ensure they aren't too tiny to tap */
-        padding: 10px 20px;  /* Reduced from 15px 40px */
-        font-size: 14px;     /* Smaller text */
-        height: 40px;
-    }
-
-    .tele {
-        padding: 8px 15px;
+        padding: 10px 15px;
         font-size: 14px;
-        height: 40px;
+        width: auto;
+        min-width: 120px;
     }
-
-    .svg1 {
-        width: 18px;         /* Scale down the phone icon */
-        height: 18px;
-    }
-
-
 }
