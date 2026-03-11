@@ -188,6 +188,52 @@ text-align: center;
 
 /* MOBILE ONLY SETTINGS */
 @media (max-width: 768px) {
+    .Login {
+        display: flex;
+        flex-direction: row; /* Keep buttons side-by-side */
+        align-items: center;  /* This is the key fix for vertical alignment */
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 15px;
+        margin-right: 0;
+        height: auto;
+    }
+
+    /* 2. Force Identical Sizing */
+    .tele, .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;         /* Forces both to be the exact same height */
+        padding: 0 15px;      /* Consistent side padding */
+        font-size: 13px;
+        border-radius: 5px;
+        width: auto;          /* Prevents them from stretching too wide */
+        margin: 0;
+        border: none;
+        box-sizing: border-box;
+    }
+
+    /* 3. Adjust Icon Scaling */
+    .svg1 {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+
+    /* 4. Fix Hero Content Spacing */
+    .intro {
+        width: 90%;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
     /* 1. Fix Navigation Header */
     .nav {
         flex-direction: column;
@@ -213,47 +259,10 @@ text-align: center;
         font-size: 14px;
     }
 
-    /* 2. Fix Button Misalignment */
-    .Login {
-        display: flex;
-        flex-direction: row; /* Keeps them on one line */
-        align-items: center;  /* Forces vertical center alignment */
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
-        margin-right: 0;
-        margin-top: 10px;
-    }
-
-    .tele, .btn-primary {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 40px;        /* Matches height exactly */
-        padding: 0 12px;     /* Minimized padding */
-        font-size: 13px;
-        border-radius: 4px;
-        width: auto;         /* Hugs the content */
-        margin: 0;
-        box-sizing: border-box;
-    }
-
     .btn-primary {
         min-width: 110px;
     }
 
-    .svg1 {
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
-    }
-
-    /* 3. Adjust Content (Intro) */
-    .intro {
-        width: 90%;
-        margin: 40px auto;
-        text-align: center;
-    }
 
     .intro h1 {
         font-size: 20px;
@@ -264,11 +273,7 @@ text-align: center;
         display: none; /* Cleaner look for mobile */
     }
 
-    .intro h2 {
-        font-size: 40px;
-        line-height: 1.1;
-    }
-
+    
     .intro h3 {
         font-size: 16px;
         margin-top: 10px;
@@ -289,3 +294,4 @@ text-align: center;
         min-width: 120px;
     }
 }
+
