@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgba(94, 247, 94, 0.493);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    gap: 60px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.links a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg') center/cover fixed;
+    height: 600px;
+    display: block;
+    align-items: space-around;
+    justify-content: center;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.about-hero h1 {
+    color: white;
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+}
+.about-hero p {
+    color: white;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.our-story h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: rgba(94, 247, 94, 0.493);
+}
+
+.our-story p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Our Mission Section */
+.our-mission {
+    justify-items: center;
+    align-content: center;
+}
+
+.our-mission h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgba(94, 247, 94, 0.493);
+    opacity: 0;
+    animation: fadeRight 1s ease forwards;
+}
+
+.our-mission p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.mission-image {
+    flex: 1;
+}
+
+.mission-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg') bottom/cover;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: rgba(94, 247, 94, 0.493);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
+.why-choose-us ul {
+    list-style: circle;
+}
+
+.why-choose-us li {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Meet our team section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team {
+    padding: 80px 0;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.trainer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.trainer {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.trainer:hover {
+    transform: translateY(-10px);
+}
+
+.trainer img {
+    background: url(IMG-20251114-WA0087.jpg) top/cover;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.trainer h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.trainer .role {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.trainer p {
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.facilities {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    color: green;
+    justify-items: center;
+    font-weight: bold;
+}
+
+/* CTA Section */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgba(94, 247, 94, 0.493);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgba(94, 247, 94, 0.493);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+/* ============================================================
+   MOBILE — max-width: 768px
+   Matches fir.css pattern exactly:
+   • Logo area renders the ☰ icon via ::after
+   • .tele button becomes invisible hamburger trigger
+   • .links menu becomes full-screen dark overlay
+   • .links::before renders the ✕ icon when open
+   • JS toggles .open on .links
+   ============================================================ */
+@media (max-width: 720px) {
+
+    /* --- Layout resets --- */
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        min-height: 20px;
+        
+    }
+
+    /* --- Logo area --- */
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* --- Hamburger icon rendered via ::after on .logo --- */
+    .logo::after {
+        content: "☰";
+        position: fixed;
+        top: 18px;
+        right: 20px;
+        font-size: 20px;
+        color: rgba(94, 247, 94, 0.493);
+        background: #fff;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* --- .tele is the ACTUAL clickable hamburger trigger --- */
+    /* We hide the phone look and make it the invisible trigger overlay */
+    .tele {
+        position: fixed !important;
+        top: 13px !important;
+        right: 15px !important;
+        width: 50px !important;
+        height: 40px !important;
+        background: transparent !important;
+        color: transparent !important;
+        border: none !important;
+        z-index: 4000 !important;        /* sits ON TOP of the ::after hamburger icon */
+        cursor: pointer !important;
+        outline: none !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        overflow: hidden !important;
+        font-size: 0 !important;          /* hides text */
+    }
+
+    /* --- Hide the SVG phone icon inside .tele on mobile --- */
+    .tele .svg1 {
+        display: none !important;
+    }
+
+    /* --- Dropdown menu: hidden by default --- */
+    .links {
+        display: flex !important;         /* always in DOM, controlled by visibility */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        justify-content: space-around;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;                    /* full-screen overlay */
+        padding-top: 80px;
+        gap: 10px;
+        z-index: 2000;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+
+        /* Hidden state — uses opacity + pointer-events so links stay focusable */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .links a {
+        font-size: 20px;
+        padding: 12px 0;
+        justify-content: center;
+    }
+
+    
+    .nav .tele:focus ~ * .links,
+    .nav:focus-within .links {
+        opacity: 1 !important;
+        pointer-events: all !important;
+        transform: translateY(0) !important;
+    }
+
+    /*
+     * EXTRA PERSISTENCE: The menu also stays open when any link
+     * inside it is focused, using :focus-within on .links itself.
+     */
+    .links:focus-within {
+        opacity: 1 !important;
+        pointer-events: all !important;
+        transform: translateY(0) !important;
+    }
+
+    /* Close button rendered at top-right of the open menu */
+    .links::before {
+        content: "✕";
+        position: fixed;
+        top: 18px;
+        right: 20px;
+        font-size: 20px;
+        color: rgba(94, 247, 94, 0.493);
+        background: #fff;
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 5000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        /* Only visible when menu is open */
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .nav:focus-within .links::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* --- .Login area: hide Join Now desktop button --- */
+    .Login .btn-primary {
+        display: none;
+    }
+
+    /* --- Hero section --- */
+    .about-hero {
+        height: 300px;
+        margin-top: 0;
+        padding-top: 100px;
+    }
+
+    .about-hero h1 {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    /* --- SECTIONS --- */
+    .our-story,
+    .our-mission,
+    .facilities {
+        padding: 50px 20px;
+    }
+
+    .our-story h2,
+    .our-mission h2,
+    .facilities h2 {
+        font-size: 26px;
+    }
+
+    .our-story p,
+    .our-mission p,
+    .facilities p {
+        font-size: 15px;
+    }
+
+    .why-choose-us {
+        padding: 50px 20px;
+    }
+
+    .why-choose-us h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .why-choose-us li {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+
+    .team {
+        padding: 50px 20px;
+    }
+
+    .team h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .trainer-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 50px 20px;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+    }
+
+    .cta p {
+        font-size: 15px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
