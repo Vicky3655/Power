@@ -332,7 +332,7 @@ footer .container {
 }
 
 /* ============================================================
-   MOBILE — max-width: 768px
+   MOBILE — max-width: 720px
    Matches fir.css pattern exactly:
    • .nav::after  → renders the ☰ icon visually
    • .hamburger   → invisible real button on top of ☰, opens menu
@@ -341,7 +341,7 @@ footer .container {
    • .close-menu  → invisible real button on top of ✕, closes menu
    • JS adds/removes .open on .links to toggle state
    ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
 
     /* Header: transparent, pointer-events passed through */
     header {
