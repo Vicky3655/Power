@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Power House Gym</title>
+  <link rel="stylesheet" type="text/css" href="about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="logo-dark-transparent.png" alt="Power House Gym Logo">
+      </div>
+
+      <div class="links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="Program.html">PROGRAMS</a>
+        <a href="Amenities.html">AMENITIES</a>
+      </div>
+
+      <div class="Login">
+        <button class="tele" aria-label="Call us">
+          <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+          </svg>
+          +234 813 387 6786
+        </button>
+        <a href="Login.html" class="btn-primary">Join Now</a>
+        <!-- Hamburger button (mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about-hero">
+    <h1>About Power House</h1>
+    <p>Your Journey to Transformation Starts Here</p>
+  </section>
+
+  <section class="our-story">
+    <div class="container">
+      <h2>Our Story</h2>
+      <p>Power House Gym was founded with a mission to create a fitness community where mind meets transformation. We've been helping individuals achieve their fitness goals through personalized training, state-of-the-art equipment, and a supportive environment.</p>
+    </div>
+  </section>
+
+  <section class="our-mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>To empower individuals to push beyond their limits and achieve sustainable fitness results through expert coaching, innovative programs, and a welcoming community.</p>
+    </div>
+  </section>
+
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why Choose Power House?</h2>
+      <ul>
+        <li>Experienced and certified coaches</li>
+        <li>Dynamic and diverse class offerings</li>
+        <li>Top-tier equipment and facilities</li>
+        <li>Personalized training programs</li>
+        <li>Supportive community atmosphere</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="trainer-cards">
+        <div class="trainer">
+          <img src="e1e176b9-df7c-4268-8b36-21927288b209.jpg" alt="John Doe - Head Coach">
+          <h3>John Doe</h3>
+          <p class="role">Head Coach</p>
+          <p>10 years of experience transforming lives through strength and conditioning.</p>
+        </div>
+        <div class="trainer">
+          <img src="IMG-20251114-WA0087.jpg" alt="Chime Victor - Fitness Specialist">
+          <h3>Chime Victor</h3>
+          <p class="role">Fitness Specialist</p>
+          <p>8 years of experience in functional fitness and performance training.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facilities">
+    <div class="container">
+      <h2>Our Facilities</h2>
+      <p>We feature modern equipment, spacious workout areas, locker rooms, and amenities designed to enhance your fitness experience.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Transform?</h2>
+      <p>Take the first step. Your strongest self is waiting.</p>
+      <a href="Program.html" class="btn">Start Your Free Trial</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Power House Gym. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close when any nav link is clicked
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+
+</body>
+</html>

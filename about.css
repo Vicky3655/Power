@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =====================
+   HEADER / NAV
+   ===================== */
+header {
+    background-color: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 65px;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: #4CAF50;
+}
+
+.Login {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.tele {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.tele:hover {
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.tele .svg1 {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 9px 22px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background-color: #388E3C;
+    transform: scale(1.03);
+}
+
+/* =====================
+   HERO
+   ===================== */
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg') center/cover fixed;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 65px;
+}
+
+.about-hero h1 {
+    color: white;
+    font-size: 52px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-hero p {
+    color: rgba(255,255,255,0.85);
+    font-size: 22px;
+    margin-top: 18px;
+    max-width: 600px;
+}
+
+/* =====================
+   OUR STORY
+   ===================== */
+.our-story {
+    padding: 90px 20px;
+    background-color: #f9f9f9;
+}
+
+.our-story h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #2E7D32;
+}
+
+.our-story p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================
+   OUR MISSION
+   ===================== */
+.our-mission {
+    padding: 90px 20px;
+    text-align: center;
+    background: white;
+}
+
+.our-mission h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2E7D32;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.our-mission p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease both;
+}
+
+/* =====================
+   WHY CHOOSE US
+   ===================== */
+.why-choose-us {
+    padding: 90px 20px;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg') bottom/cover;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #81C784;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.why-choose-us li {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 18px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.why-choose-us li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+/* =====================
+   TEAM
+   ===================== */
+.team {
+    padding: 90px 20px;
+    background: #fff;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.trainer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trainer {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trainer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.trainer img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.trainer h3 {
+    font-size: 22px;
+    margin: 20px 0 6px;
+    color: #333;
+}
+
+.trainer .role {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.trainer p {
+    padding: 0 20px 24px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* =====================
+   FACILITIES
+   ===================== */
+.facilities {
+    padding: 90px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.facilities h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2E7D32;
+    font-weight: 700;
+}
+
+.facilities p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* =====================
+   CTA
+   ===================== */
+.cta {
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 36px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2E7D32;
+    padding: 16px 44px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+/* =====================
+   ANIMATIONS
+   ===================== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   HAMBURGER MENU
+   (mobile only — see @media below)
+   ===================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 3000;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =====================
+   RESPONSIVE — MOBILE
+   ===================== */
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    /* Show hamburger, hide desktop nav items */
+    .hamburger {
+        display: flex;
+    }
+
+    .tele {
+        display: none;
+    }
+
+    .Login .btn-primary {
+        display: none;
+    }
+
+    /* Full-screen overlay nav */
+    .links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.97);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+        z-index: 2000;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .links.open {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    .links a {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    /* Hero */
+    .about-hero {
+        height: auto;
+        min-height: 320px;
+        padding: 120px 20px 60px;
+        background-attachment: scroll; /* fixed bg broken on iOS */
+        margin-top: 65px;
+    }
+
+    .about-hero h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    /* Sections */
+    .our-story,
+    .our-mission,
+    .facilities {
+        padding: 60px 20px;
+    }
+
+    .our-story h2,
+    .our-mission h2,
+    .facilities h2 {
+        font-size: 28px;
+    }
+
+    .our-story p,
+    .our-mission p,
+    .facilities p {
+        font-size: 16px;
+    }
+
+    .why-choose-us {
+        padding: 60px 20px;
+        background-attachment: scroll;
+    }
+
+    .why-choose-us h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .why-choose-us li {
+        font-size: 16px;
+    }
+
+    .team {
+        padding: 60px 20px;
+    }
+
+    .team h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .trainer-cards {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .cta {
+        padding: 60px 20px;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    .cta p {
+        font-size: 16px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+}
