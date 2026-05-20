@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Power House Gym</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <!-- Fixed background -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Header / Nav -->
+    <header>
+        <nav class="nav">
+            <div class="logo">
+                <img src="logo-dark-transparent.png" alt="Power House Gym">
+            </div>
+
+            <div class="links" id="navLinks">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="gallery.html" class="active">GALLERY</a>
+                <a href="Program.html">PROGRAMS</a>
+                <a href="Amenities.html">AMENITIES</a>
+            </div>
+
+            <div class="Login">
+                <button class="tele" aria-label="Call us">
+                    <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+                    </svg>
+                    +234 813 387 6786
+                </button>
+                <a href="Login.html" class="btn-primary">Join Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page content -->
+    <div class="page-wrapper">
+
+        <!-- Gallery heading -->
+        <div class="gallery-header">
+            <h1>Power House <span>Gallery</span></h1>
+            <p>Moments of strength, sweat &amp; transformation</p>
+        </div>
+
+        <!-- Search -->
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search photos…" id="searchInput" autocomplete="off">
+        </div>
+
+        <!-- Masonry grid -->
+        <div class="masonry-gallery" id="gallery">
+
+            <div class="masonry-item" onclick="openModal(0)">
+                <img src="1000_F_1279995826_6vJuFSLrPvHpQNelwXqoFVWtTbcQ6WGk.jpg" alt="Dream Girl" loading="lazy">
+                <div class="image-info"><h3>Dream Girl</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(1)">
+                <img src="1000_F_891585995_P2Wt8a8p7owQtJp5w9CJgridoeB7WJwR.jpg" alt="House Kits" loading="lazy">
+                <div class="image-info"><h3>House Kits</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(2)">
+                <img src="1000_F_1729071412_47NUzkzQ0A4gkpOlgcCBkYqoIxn4d9of.jpg" alt="Day Smile" loading="lazy">
+                <div class="image-info"><h3>Day Smile</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(3)">
+                <img src="1000_F_744688310_CeWKUkT0aheIzK7sxSti54yCeVkefh4T.jpg" alt="House Kits 2" loading="lazy">
+                <div class="image-info"><h3>House Kits 2</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(4)">
+                <img src="e1e176b9-df7c-4268-8b36-21927288b209.jpg" alt="Motivation" loading="lazy">
+                <div class="image-info"><h3>Motivation</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(5)">
+                <img src="logo-dark-transparent.png" alt="Dark Logo" loading="lazy">
+                <div class="image-info"><h3>Dark Logo</h3><p>Branding</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(6)">
+                <img src="logo-2-square.png" alt="Power House" loading="lazy">
+                <div class="image-info"><h3>Power House</h3><p>Sticker Available</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(7)">
+                <img src="logo-light-transparent.png" alt="Light Logo" loading="lazy">
+                <div class="image-info"><h3>Light Logo</h3><p>Branding</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(8)">
+                <img src="5681546.jpg" alt="Girls Energy" loading="lazy">
+                <div class="image-info"><h3>Girls Energy</h3><p>Stickers Available</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(9)">
+                <img src="IMG-20251114-WA0087.jpg" alt="CEO Chime Victor" loading="lazy">
+                <div class="image-info"><h3>CEO Chime Victor</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(10)">
+                <img src="YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg" alt="Men's Health" loading="lazy">
+                <div class="image-info"><h3>Men's Health</h3><p>Photography</p></div>
+            </div>
+
+            <div class="masonry-item" onclick="openModal(11)">
+                <img src="e1e176b9-df7c-4268-8b36-21927288b209.jpg" alt="Strength" loading="lazy">
+                <div class="image-info"><h3>Strength</h3><p>Photography</p></div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Power House Gym. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="Program.html">Programs</a>
+                <a href="Amenities.html">Amenities</a>
+                <a href="Login.html">Join</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Modal lightbox -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <span class="close" onclick="closeModal()" title="Close">&times;</span>
+        <span class="nav-arrow prev" onclick="changeImage(-1)" title="Previous">&#10094;</span>
+        <span class="nav-arrow next" onclick="changeImage(1)"  title="Next">&#10095;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="">
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalCategory"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ── Image data ── */
+        const images = [
+            { src: '1000_F_1279995826_6vJuFSLrPvHpQNelwXqoFVWtTbcQ6WGk.jpg', title: 'Dream Girl',       category: 'Photography' },
+            { src: '1000_F_891585995_P2Wt8a8p7owQtJp5w9CJgridoeB7WJwR.jpg',  title: 'House Kits',       category: 'Photography' },
+            { src: '1000_F_1729071412_47NUzkzQ0A4gkpOlgcCBkYqoIxn4d9of.jpg', title: 'Day Smile',        category: 'Photography' },
+            { src: '1000_F_744688310_CeWKUkT0aheIzK7sxSti54yCeVkefh4T.jpg',  title: 'House Kits 2',     category: 'Photography' },
+            { src: 'e1e176b9-df7c-4268-8b36-21927288b209.jpg',                title: 'Motivation',       category: 'Photography' },
+            { src: 'logo-dark-transparent.png',                                title: 'Dark Logo',        category: 'Branding' },
+            { src: 'logo-2-square.png',                                        title: 'Power House',      category: 'Sticker Available' },
+            { src: 'logo-light-transparent.png',                               title: 'Light Logo',       category: 'Branding' },
+            { src: '5681546.jpg',                                              title: 'Girls Energy',     category: 'Stickers Available' },
+            { src: 'IMG-20251114-WA0087.jpg',                                  title: 'CEO Chime Victor', category: 'Photography' },
+            { src: 'YouFit-Dania-Beach-11-25-24-2-926-Edit.jpg',              title: "Men's Health",     category: 'Photography' },
+            { src: 'e1e176b9-df7c-4268-8b36-21927288b209.jpg',                title: 'Strength',         category: 'Photography' }
+        ];
+
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            const img   = images[index];
+            document.getElementById('modalImg').src          = img.src;
+            document.getElementById('modalTitle').textContent    = img.title;
+            document.getElementById('modalCategory').textContent = img.category;
+            document.getElementById('modal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        function changeImage(dir) {
+            currentIndex = (currentIndex + dir + images.length) % images.length;
+            openModal(currentIndex);
+        }
+
+        /* Keyboard navigation */
+        document.addEventListener('keydown', function (e) {
+            if (!document.getElementById('modal').classList.contains('show')) return;
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'ArrowLeft')  changeImage(-1);
+            if (e.key === 'Escape')     closeModal();
+        });
+
+        /* Click backdrop to close */
+        document.getElementById('modal').addEventListener('click', function (e) {
+            if (e.target === this) closeModal();
+        });
+
+        /* ── Search ── */
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const term  = this.value.toLowerCase();
+            const items = document.querySelectorAll('.masonry-item');
+            items.forEach(function (item) {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const cat   = item.querySelector('p').textContent.toLowerCase();
+                item.style.display = (title.includes(term) || cat.includes(term)) ? '' : 'none';
+            });
+        });
+
+        /* ── Hamburger ── */
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+
+</body>
+</html>
