@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouFit — Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <img src="logo-dark-transparent.png" alt="YouFit Logo"
+           onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block'">
+      <div id="logo-text" style="display:none; font-size:28px; font-weight:800; color:#5ef75e; letter-spacing:-1px;">YOU<span style="color:#fff;">FIT</span></div>
+    </div>
+
+    <h1 class="page-title">Create Account</h1>
+    <p class="page-subtitle">Start your fitness journey today</p>
+
+    <form id="register-form" novalidate>
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <div class="input-wrap">
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" autocomplete="name">
+          <span class="input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/>
+            </svg>
+          </span>
+        </div>
+        <span class="error-msg" id="name-error">Please enter your full name.</span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-wrap">
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          <span class="input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </span>
+        </div>
+        <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <input type="password" id="password" name="password" placeholder="Create a strong password" autocomplete="new-password">
+          <span class="input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/>
+            </svg>
+          </span>
+          <button type="button" class="eye-toggle" id="toggle-pw" aria-label="Show password">
+            <svg id="eye1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+            </svg>
+          </button>
+        </div>
+        <span class="error-msg" id="pass-error">Password must be at least 8 characters.</span>
+
+        <!-- Strength meter -->
+        <div class="strength-wrap" id="strength-wrap" style="display:none">
+          <div class="strength-bars">
+            <div class="strength-bar" id="bar1"></div>
+            <div class="strength-bar" id="bar2"></div>
+            <div class="strength-bar" id="bar3"></div>
+            <div class="strength-bar" id="bar4"></div>
+          </div>
+          <span class="strength-label" id="strength-label">Too weak</span>
+        </div>
+
+        <!-- Requirements -->
+        <div class="requirements" id="requirements">
+          <div class="req-item" id="req-length"><div class="req-dot"></div> At least 8 characters</div>
+          <div class="req-item" id="req-upper"><div class="req-dot"></div> One uppercase letter</div>
+          <div class="req-item" id="req-number"><div class="req-dot"></div> One number</div>
+          <div class="req-item" id="req-special"><div class="req-dot"></div> One special character</div>
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <div class="input-wrap">
+          <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" autocomplete="new-password">
+          <span class="input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/>
+            </svg>
+          </span>
+          <button type="button" class="eye-toggle" id="toggle-confirm" aria-label="Show confirm password">
+            <svg id="eye2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+            </svg>
+          </button>
+        </div>
+        <span class="error-msg" id="confirm-error">Passwords do not match.</span>
+      </div>
+
+      <!-- Terms -->
+      <div class="checkbox-wrap">
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms">I agree to the <a href="#">Terms of Service</a> &amp; <a href="#">Privacy Policy</a></label>
+      </div>
+      <span class="error-msg" id="terms-error" style="margin-top:-14px; margin-bottom:14px;">You must accept the terms to continue.</span>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-primary" id="submit-btn">
+        <span class="btn-text">Create Account</span>
+        <div class="spinner"></div>
+      </button>
+
+    </form>
+
+    <p class="footer-text">Already have an account? <a href="Login.html">Sign in</a></p>
+
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ── Eye toggles ────────────────────────────────────────────────
+    const eyeOpen   = `<path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>`;
+    const eyeClosed = `<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-5 0-9.27-3.11-11-7a10.08 10.08 0 0 1 2.26-3.47M9.9 4.24A9.12 9.12 0 0 1 12 4c5 0 9.27 3.11 11 7a10.12 10.12 0 0 1-1.67 2.68M1 1l22 22M6.34 6.34A7 7 0 0 0 12 19a7 7 0 0 0 5.66-12.66"/>`;
+
+    function makeEyeToggle(btnId, inputId, iconId) {
+      document.getElementById(btnId).addEventListener('click', () => {
+        const inp = document.getElementById(inputId);
+        const ic  = document.getElementById(iconId);
+        inp.type = inp.type === 'password' ? 'text' : 'password';
+        ic.innerHTML = inp.type === 'text' ? eyeClosed : eyeOpen;
+      });
+    }
+
+    makeEyeToggle('toggle-pw',      'password', 'eye1');
+    makeEyeToggle('toggle-confirm', 'confirm',  'eye2');
+
+    // ── Strength meter ─────────────────────────────────────────────
+    const pwInput = document.getElementById('password');
+
+    const checks = {
+      length:  v => v.length >= 8,
+      upper:   v => /[A-Z]/.test(v),
+      number:  v => /\d/.test(v),
+      special: v => /[^A-Za-z0-9]/.test(v),
+    };
+
+    const levels = [
+      { label: 'Too weak',   cls: 'weak',   bars: 1 },
+      { label: 'Fair',       cls: 'fair',   bars: 2 },
+      { label: 'Good',       cls: 'good',   bars: 3 },
+      { label: 'Strong 💪',  cls: 'strong', bars: 4 },
+    ];
+
+    pwInput.addEventListener('input', function() {
+      const val   = this.value;
+      const score = Object.values(checks).filter(fn => fn(val)).length;
+
+      document.getElementById('req-length').classList.toggle('met',  checks.length(val));
+      document.getElementById('req-upper').classList.toggle('met',   checks.upper(val));
+      document.getElementById('req-number').classList.toggle('met',  checks.number(val));
+      document.getElementById('req-special').classList.toggle('met', checks.special(val));
+
+      const wrap = document.getElementById('strength-wrap');
+      const reqs = document.getElementById('requirements');
+
+      if (val.length === 0) {
+        wrap.style.display = 'none';
+        reqs.classList.remove('visible');
+        return;
+      }
+
+      wrap.style.display = 'block';
+      reqs.classList.add('visible');
+
+      const lvl = levels[Math.max(0, score - 1)];
+      const bars = document.querySelectorAll('.strength-bar');
+      bars.forEach((b, i) => {
+        b.className = 'strength-bar';
+        if (i < lvl.bars) b.classList.add(lvl.cls);
+      });
+
+      document.getElementById('strength-label').textContent = lvl.label;
+    });
+
+    // ── Toast ──────────────────────────────────────────────────────
+    function showToast(msg, type = '') {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.className = 'toast ' + type;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+
+    // ── Helpers ────────────────────────────────────────────────────
+    function markError(id, errId, msg) {
+      const el = document.getElementById(id);
+      const er = document.getElementById(errId);
+      if (el) { el.classList.add('invalid'); el.classList.remove('valid'); }
+      er.textContent = msg;
+      er.classList.add('visible');
+      return false;
+    }
+
+    function markValid(id, errId) {
+      const el = document.getElementById(id);
+      const er = document.getElementById(errId);
+      if (el) { el.classList.add('valid'); el.classList.remove('invalid'); }
+      er.classList.remove('visible');
+      return true;
+    }
+
+    // ── Live ───────────────────────────────────────────────────────
+    document.getElementById('fullname').addEventListener('blur', function() {
+      if (!this.value.trim() || this.value.trim().split(' ').length < 2) {
+        markError('fullname', 'name-error', 'Please enter your first and last name.');
+      } else { markValid('fullname', 'name-error'); }
+    });
+
+    document.getElementById('email').addEventListener('blur', function() {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value)) {
+        markError('email', 'email-error', 'Please enter a valid email address.');
+      } else { markValid('email', 'email-error'); }
+    });
+
+    document.getElementById('confirm').addEventListener('blur', function() {
+      if (this.value !== document.getElementById('password').value) {
+        markError('confirm', 'confirm-error', 'Passwords do not match.');
+      } else { markValid('confirm', 'confirm-error'); }
+    });
+
+    // ── Submit ─────────────────────────────────────────────────────
+    document.getElementById('register-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const name    = document.getElementById('fullname').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const pw      = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+      const terms   = document.getElementById('terms').checked;
+      let valid = true;
+
+      if (!name || name.split(' ').length < 2) {
+        valid = markError('fullname', 'name-error', 'Please enter your first and last name.');
+      } else { markValid('fullname', 'name-error'); }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        valid = markError('email', 'email-error', 'Please enter a valid email address.');
+      } else { markValid('email', 'email-error'); }
+
+      if (pw.length < 8) {
+        valid = markError('password', 'pass-error', 'Password must be at least 8 characters.');
+      } else { markValid('password', 'pass-error'); }
+
+      if (pw !== confirm) {
+        valid = markError('confirm', 'confirm-error', 'Passwords do not match.');
+      } else if (confirm) { markValid('confirm', 'confirm-error'); }
+
+      if (!terms) {
+        document.getElementById('terms-error').classList.add('visible');
+        valid = false;
+      } else {
+        document.getElementById('terms-error').classList.remove('visible');
+      }
+
+      if (!valid) { showToast('Please fix the errors above.', 'error'); return; }
+
+      const btn = document.getElementById('submit-btn');
+      btn.classList.add('loading');
+      await new Promise(r => setTimeout(r, 2000));
+      btn.classList.remove('loading');
+
+      showToast('✓ Account created! Welcome to YouFit!', 'success');
+      // window.location.href = 'dashboard.html';
+    });
+  </script>
+
+</body>
+</html>
